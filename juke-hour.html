@@ -1231,7 +1231,7 @@ function boot(){
     if(typeof THREE==='undefined')throw new Error('three missing');
     _v=new THREE.Vector3();_p=new THREE.Vector3();_o=new THREE.Object3D();
     renderer=new THREE.WebGLRenderer({canvas:cvs,antialias:true});
-    renderer.setPixelRatio(Math.min(2,window.devicePixelRatio||1));
+    renderer.setPixelRatio(Math.min(1.5,window.devicePixelRatio||1));
     buildArena();resize();
     if(window.ResizeObserver)new ResizeObserver(resize).observe(stage);else window.addEventListener('resize',resize);
     titleCard();
